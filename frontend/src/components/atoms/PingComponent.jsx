@@ -10,3 +10,4 @@ export default function PingComponent() {
 
   return <>Hello {data.message}</>;
 }
+    
