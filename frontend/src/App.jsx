@@ -1,21 +1,13 @@
-
-import { useState } from 'react'
-import './App.css'
-import usePing from './hooks/apis/queries/usePing'
-import PingComponent from './components/atoms/PingComponent';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import CreateProject from "./pages/CreateProject";
 
 function App() {
-  
-  const[isVisible, setIsVisible] = useState(false);
-
   return (
-    <>
-      <button onClick={() => setIsVisible(!isVisible)}>
-          Toggle
-      </button>
-      {isVisible && <PingComponent />}
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<CreateProject/>} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
